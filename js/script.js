@@ -12,10 +12,13 @@ button_play.addEventListener('click', function(){
     // cancella l'eventuale tabella già creata
     let containerSquare = document.getElementById('container-div');
     containerSquare.innerHTML = "";
+
+    // assegno alcune variabili fuori dal for
     let divSquare;
     let n_celle;
     let difficultySelected = document.getElementById('difficulty').value;
 
+    // decido quanti quadrati fare in base alla difficoltà
     if (difficultySelected === 'hard') {
         n_celle = 100;
     }
@@ -39,7 +42,7 @@ button_play.addEventListener('click', function(){
         // incollo il quadrato nel suo container
         containerSquare.append(divSquare);
 
-        // aggiungere la classe con la dimensione giusta
+        // aggiungere la classe con la dimensione giusta in base alla dificoltà
         if (difficultySelected === 'hard') {
             divSquare.classList.add('hard-size');
         }
