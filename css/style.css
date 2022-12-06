@@ -95,9 +95,22 @@ main .card {
     flex-wrap: wrap;
 }
 
-main .square {
+.hard-size {
     width: calc(100% / 10);
     height: calc(100% / 10);
+}
+
+.normal-size {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.easy-size {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+main .square {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,5 +1,5 @@
 function createSquare(ind) {
-    let squareDiv = document.createElement('div');
+    const squareDiv = document.createElement('div');
     squareDiv.className = 'square';
     squareDiv.innerText = ind;
     return squareDiv;
@@ -12,10 +12,23 @@ button_play.addEventListener('click', function(){
     // cancella l'eventuale tabella già creata
     let containerSquare = document.getElementById('container-div');
     containerSquare.innerHTML = "";
-    
+    let divSquare;
+    let n_celle;
+    let difficultySelected = document.getElementById('difficulty').value;
+
+    if (difficultySelected === 'hard') {
+        n_celle = 100;
+    }
+    else if (difficultySelected === 'normal') {
+        n_celle = 81;
+    }
+    else {
+        n_celle = 49;
+    }
+
     // richiamo la funzione e incollo i div nel contenitore
-    for (let i = 1; i <= 100; i++) {
-        let divSquare = createSquare(i);
+    for (let i = 1; i <= n_celle; i++) {
+        divSquare = createSquare(i);
 
         // aggiungere il background azzurro quando clicco sul quadrato
         divSquare.addEventListener('click', function(){
@@ -25,5 +38,17 @@ button_play.addEventListener('click', function(){
 
         // incollo il quadrato nel suo container
         containerSquare.append(divSquare);
+
+        // aggiungere la classe con la dimensione giusta
+        if (difficultySelected === 'hard') {
+            divSquare.classList.add('hard-size');
+        }
+        else if (difficultySelected === 'normal') {
+            divSquare.classList.add('normal-size');
+        }
+        else {
+            divSquare.classList.add('easy-size');
+        }
     }
+
 })
