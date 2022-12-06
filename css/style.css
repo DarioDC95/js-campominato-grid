@@ -35,7 +35,7 @@ h1 {
     font-size: 45px;
 }
 
-header .col-left .card {
+header .card {
     display: flex;
     align-items: center;
 }
@@ -50,6 +50,19 @@ header .col-right {
 
 .font-size-lg {
     font-size: 18px;
+}
+
+.form-select {
+    margin-right: 20px;
+}
+
+select {
+    padding: 3.9px 30px 3.9px 0px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 1px solid #afafb9;
+    background-color: #e9e9ed;
+    cursor: pointer;
 }
 
 button {
