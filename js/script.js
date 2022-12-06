@@ -8,10 +8,13 @@ function createSquare(ind) {
 // Definiamo il pulsante di play
 let button_play = document.getElementById('play');
 button_play.addEventListener('click', function(){
-
+    
+    // cancella l'eventuale tabella già creata
+    let containerSquare = document.getElementById('container-div');
+    containerSquare.innerHTML = "";
+    
     // richiamo la funzione e incollo i div nel contenitore
     for (let i = 1; i <= 100; i++) {
-        let containerSquare = document.getElementById('container-div')
         let divSquare = createSquare(i);
 
         // aggiungere il background azzurro quando clicco sul quadrato

@@ -90,7 +90,6 @@ main .square {
     align-items: center;
     border: 1px solid black;
     cursor: pointer;
-    color: #7fffd4;
 }
 
 main .square.lightblue {
