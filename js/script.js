@@ -13,7 +13,7 @@ button_play.addEventListener('click', function(){
     let containerSquare = document.getElementById('container-div');
     containerSquare.innerHTML = "";
 
-    // assegno alcune variabili fuori dal for
+    // dichiaro alcune variabili fuori dal for
     let divSquare;
     let n_celle;
     let difficultySelected = document.getElementById('difficulty').value;
