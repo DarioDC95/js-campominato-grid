@@ -19,7 +19,7 @@ button_play.addEventListener('click', function(){
     let difficultySelected = document.getElementById('difficulty').value;
 
     // decido quanti quadrati fare in base alla difficoltà
-    if (difficultySelected === 'hard') {
+    if (difficultySelected === 'easy') {
         n_celle = 100;
     }
     else if (difficultySelected === 'normal') {
@@ -43,7 +43,7 @@ button_play.addEventListener('click', function(){
         containerSquare.append(divSquare);
 
         // aggiungere la classe con la dimensione giusta in base alla dificoltà
-        if (difficultySelected === 'hard') {
+        if (difficultySelected === 'easy') {
             divSquare.classList.add('hard-size');
         }
         else if (difficultySelected === 'normal') {
