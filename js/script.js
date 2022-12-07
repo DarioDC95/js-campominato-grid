@@ -35,7 +35,7 @@ button_play.addEventListener('click', function(){
 
         // aggiungere il background azzurro quando clicco sul quadrato
         divSquare.addEventListener('click', function(){
-            this.classList.add('lightblue');
+            this.classList.toggle('lightblue');
             console.log(this.innerText);
         })
 
